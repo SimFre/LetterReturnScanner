@@ -1,0 +1,14 @@
+[Unit]
+Description=Letter Return Scanner
+After=network.target
+
+[Service]
+Type=simple
+# Another Type: forking
+User=pi
+Group=pi
+WorkingDirectory=/home/pi
+ExecStart=/usr/bin/python3 /home/pi/letterreturns.py
+Restart=always
+[Install]
+WantedBy=multi-user.target
